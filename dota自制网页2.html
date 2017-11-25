@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2017年9月9日完成</title>
+<style>
+*{
+	font-family:微软雅黑;}
+h1{
+	padding-top:40px;
+	color:#666;}
+h2{
+	font-weight:200;
+	color:#666;}
+.as{
+		color:#FFF;
+		display:block;
+		text-decoration:none;
+		text-align:center;
+		width:125px;
+		margin:0 auto;
+		background-color:#0C0;
+		border-radius:5px;
+		padding:15px 25px 15px 25px;
+		border:1px solid #0C0;
+		margin-top:15px;
+		margin-bottom:30px;}
+.as:hover{
+			background-color:#3F0;}
+#aa{
+	text-align:center;
+	font-size:36px;
+	color:#333;
+	margin-top:40px;
+}
+#bb{
+	text-align:center;
+	font-size:18px;
+	color:#333;
+	margin-top:15px;
+}
+#a1{
+	width:670px;
+	float:left;
+}
+#a2{
+	width:670px;
+	float:right;
+}
+#as{
+	clear:both}
+#ab{
+	width:440px;
+	float:left;
+	margin-left:20px;}
+ul,li{
+	float:right;
+	list-style:none;}
+.bb{
+	color:#999;
+	display:block;
+	text-decoration:none;
+	width:auto;
+    margin:0 auto;
+	background-color:#FFF;
+	border-radius:5px;
+	padding:15px 25px 15px 25px;
+	border:1px solid #999;
+	margin-top:15px;
+	margin-bottom:30px;
+	margin-right:20px;}
+.bb:hover{
+	background-color:#666;}
+.ac{
+	width:800px;
+	float:right;
+	margin-right:60px;}
+#div1{
+	width:1366px;
+	height:109px;
+	background-color:#FFF;
+	clear:both;
+	position:fixed;
+	filter:alpha(opacity:75); /*ie6-8*/
+	opacity:0.75;
+	display:none;
+	z-index:1;}	
+#one{
+	width:600px;
+	height:600px;
+	overflow:hidden;
+	position:absolute;
+	top:168px;
+	left:383px;
+	}
+#one1{
+	width:3640px;
+	height:600px;
+	position:absolute;
+	margin-top:0;
+	margin-bottom:0;
+	padding:0;}
+#one1 li{
+	float:left;
+	list-style:none;
+	width:400px;
+	height:600px;
+	margin-left:100px;
+	margin-right:100px;
+	}
+	
+
+</style>
+<script  src="jquery-3.1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var minsize=5;
+var maxsize=50;
+var newon=200;
+var flakecolor="#fff";
+var flake=$("<div></div>").css({"position":"absolute","top":"-50px"}).html("☸");
+$(function(){
+	var documentheight=$(document).height();
+	var documentwidth=$(document).width();
+	setInterval(function(){
+		var starpositionleft=Math.random()*documentwidth;
+		var staropacity=0.7+Math.random()*0.3;
+		var endpositiontop=documentheight;
+		var endpositionleft=Math.random()*documentwidth;
+		var durationfall=10000+Math.random()*10000;
+		var sizeflake=minsize+Math.random()*maxsize;
+		flake.clone().appendTo("body").css({
+			"left":starpositionleft,
+			"opacity":staropacity,
+			"font-size":sizeflake,
+			"color":flakecolor}).animate(
+			{"top":endpositiontop,
+			 "left":endpositionleft,
+			 "opacity":0.5},durationfall,function(){$(this).remove();});
+	},newon);
+});
+</script>
+
+<script>
+window.onload=function(){
+	var odiv1=document.getElementById('one');
+	var oul1=odiv1.getElementsByTagName('ul')[0];
+	//var oli=oul1.getElementsByTagName('li');
+	oul1.innerHTML=oul1.innerHTML+oul1.innerHTML;
+	//oul1.style.width=oli[0].offsetWidth*oli.length+'px';
+}
+var timer=null;
+function sa(){
+	var odiv1=document.getElementById('one');
+	var oul1=odiv1.getElementsByTagName('ul')[0];
+	oul1.style.left=oul1.offsetLeft-100+'px';
+	timer=setInterval("sb()",50);	
+}
+function sb(){
+		var odiv1=document.getElementById('one');
+	var oul1=odiv1.getElementsByTagName('ul')[0];
+	if(oul1.offsetLeft%600==0){
+	clearInterval(timer);
+	setTimeout("sa()",4000);}
+	else{
+		var odiv1=document.getElementById('one');
+	var oul1=odiv1.getElementsByTagName('ul')[0];
+		oul1.style.left=oul1.offsetLeft-100+'px';
+		if(oul1.offsetLeft==-1800){
+			oul1.style.left=0;
+		}
+	}
+	
+}
+setTimeout("sa()",2000);
+</script>
+
+<script>
+window.onscroll=function(){	
+var odiv1=document.getElementById('div1');
+var oscroll=document.body.scrollTop;
+if(oscroll<=0){
+	odiv1.style.display='none';
+}else{
+odiv1.style.display='block';}	
+}
+</script>
+
+</head>
+<body style="margin:0px; padding:0px;">
+
+<div id="div1">
+<div id="ab">
+  <a href="http://www.getdota.com/" id="sa"><img src="31.jpg"/></a>
+</div>
+<div class="ac">
+<ul style="margin-top:20px">
+     <li><a href="http://www.youhundao.com/" class="bb">返回游魂岛</a></li>
+     <li><a href="http://users.09game.com/register.html" class="bb">注册教程</a></li>
+     <li><a href="http://shang.qq.com/wpa/qunwpa?idkey=9fdd1c4cf34f4fdfebd6762254b4d7de95362733e48ee4aa8941fd4148ce2785" class="bb">粉丝QQ群</a></li>
+     <li><a href="http://www.09game.com/" class="bb">09电竞平台</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="one">
+<ul id="one1">
+<li><img src="2009-7.png"/></li>
+<li><img src="2009-8.png" /></li>
+<li><img src="2009-9.png" /></li>
+</ul>
+</div>
+
+<img src="21.jpg" />
+<h1 align="center">平台版本v0.6.1</h1>
+<h2 align="center">更新时间:2017年9月9日</h2>
+<a href="http://go.09game.com/?id=3" class="as"><strong>点击下载</strong></a>
+<img src="2.jpg"  width="1366px"/>
+<p id="aa"><strong>献给所有热爱dota的玩家</strong>
+<p>
+<p id="bb"><strong>本&nbsp;页&nbsp;面&nbsp;所&nbsp;下&nbsp;载&nbsp;的&nbsp;平&nbsp;台&nbsp;版&nbsp;权&nbsp;为&nbsp;09&nbsp;所&nbsp;有,&nbsp;网&nbsp;页&nbsp;版&nbsp;权&nbsp;归&nbsp;游&nbsp;魂&nbsp;岛&nbsp;所&nbsp;有</strong></p>
+<div id="as">
+ <div id="a1"><a href="http://www.panda.tv/2009" class="as"><strong>进入酒神直播间</strong></a></div>
+ <div id="a2"><a href="https://www.panda.tv/90214" class="as"><strong>进入430直播间</strong></a></div>
+</div>
+
+
+</body>
+</html>
