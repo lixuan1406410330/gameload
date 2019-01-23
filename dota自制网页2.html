@@ -178,7 +178,7 @@ setTimeout("sa()",2000);
 <script>
 window.onscroll=function(){	
 var odiv1=document.getElementById('div1');
-var oscroll=document.body.scrollTop;
+var oscroll=document.compatMode=="CSS1Compat" ? document.documentElement.scrollTop : document.body.scrollTop;
 if(oscroll<=0){
 	odiv1.style.display='none';
 }else{
